@@ -20,8 +20,8 @@ export class SubmitFeedbackService {
             throw new Error("Type is required");
         }
 
-        if (!type) {
-            throw new Error("Type is required");
+        if (!comment) {
+            throw new Error("Comment is required");
         }
 
         if (screenshot && !screenshot.startsWith("data:image/png;base64")) {
