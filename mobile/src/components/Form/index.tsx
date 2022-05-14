@@ -4,6 +4,8 @@ import { View, TextInput, Image, Text, TouchableOpacity } from 'react-native';
 import { theme } from '../../theme';
 import { styles } from './styles';
 import { FeedbackType } from '../Widget';
+import { ScreenshotButton } from '../ScreenshotButton';
+import { FeedbackButton } from '../FeedbackButton';
 import { feedbackTypes } from '../../utils/feedbackTypes'; 
 
 interface Props {
@@ -28,6 +30,14 @@ export function Form({ feedbackType }: Props) {
         </View>
         <TextInput style={styles.textInput} multiline placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
         placeholderTextColor={theme.colors.text_secondary}/> 
+        <View style={styles.footer}>
+            <ScreenshotButton 
+                onTakeShot={() => { }}
+                onRemoveShot={() => {}}
+                screenshot={""}            
+            />
+            <FeedbackButton isLoading={false}/>    
+        </View>
     </View>
   );
 }

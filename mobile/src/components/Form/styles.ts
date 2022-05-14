@@ -40,6 +40,11 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: theme.colors.stroke,
         color: theme.colors.text_primary,
-        fontFamily: theme.fonts.medium
+        fontFamily: theme.fonts.regular
+    },
+
+    footer: {
+        flexDirection: 'row',
+        marginBottom: 16
     }
 });
